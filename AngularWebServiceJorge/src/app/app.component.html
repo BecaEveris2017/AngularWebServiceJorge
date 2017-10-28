@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+  
+</div>
+<button (click)="funcion_Mostrar()" name="btn_lista">{{mostrarListaColores ?'ocultar lista':'mostrar lista'}}</button>
+<div #divLista *ngIf="mostrarListaColores" class="color_lista">
+  <h2>Lista de colores</h2>
+
+  <ul>
+
+    <li *ngFor="let color of colores">{{color}}
+
+    </li>
+    <form (submit)="funcion_enviar(varColor)">
+      <input #varColor type="text" name="inputColor" placeholder="ingrese color nuevo">
+    </form>
+  </ul>
+  
+</div>
