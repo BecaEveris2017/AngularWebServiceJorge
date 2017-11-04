@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <h1>
     Welcome to {{title}}!
   </h1>
@@ -7,7 +7,13 @@
 </div>
 <button (click)="funcion_Mostrar()" name="btn_lista">{{mostrarListaColores ?'ocultar lista':'mostrar lista'}}</button>
 <div #divLista *ngIf="mostrarListaColores" class="color_lista">
-  <h2>Lista de colores</h2>
+  <h3>Posts: </h3>
+  <div *ngFor="let post of posts">
+    <h1>{{post.title}}</h1>
+    <h2>{{post.id}}</h2>
+    <p>{{post.body}}</p>
+  </div> -->
+  <!-- <h2>Lista de colores</h2>
 
   <ul>
 
@@ -17,6 +23,40 @@
     <form (submit)="funcion_enviar(varColor)">
       <input #varColor type="text" name="inputColor" placeholder="ingrese color nuevo">
     </form>
-  </ul>
+  </ul> -->
   
-</div>
+<!-- <app-photos></app-photos>
+<app-comments></app-comments>
+<app-albums></app-albums>
+<app-todos></app-todos> -->
+<!-- <app-nuevo-componente></app-nuevo-componente> -->
+<app-spinner [threshold]="500"> </app-spinner>
+<div class="col-sm-12 col-lg-12 col-md-12">
+  <h3>Menu</h3>
+  <hr>
+  <div class="col-xs-3 col-lg-3 col-md-3 padding-right-0"> 
+    <!-- required for floating -->
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs tabs-left">
+      <li class="active"><a href="#comments" data-toggle="tab" aria-expanded="true">Comments</a></li>
+      <li class=""><a href="#photos" data-toggle="tab" aria-expanded="false">Photos</a></li>
+      <li><a href="#albums" data-toggle="tab">Albums</a></li>
+      <li><a href="#todos" data-toggle="tab">Todos</a></li>
+      <li><a href="#posts" data-toggle="tab">Posts</a></li>
+      <li><a href="#users" data-toggle="tab">Users</a></li>
+    </ul>
+  </div>
+
+  <div class="col-xs-9 col-md-9 col-lg-9 padding-left-10">
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div class="tab-pane active" id="comments"><app-comments></app-comments></div>
+      <div class="tab-pane" id="photos"><app-photos></app-photos></div>
+      <div class="tab-pane" id="albums"><app-albums></app-albums></div>
+      <div class="tab-pane" id="todos"><app-todos></app-todos></div>
+      <div class="tab-pane" id="posts"><app-post></app-post></div>
+      <div class="tab-pane" id="users"><app-users></app-users></div>
+    </div>
+  </div>
+
+  <div class="clearfix"></div>

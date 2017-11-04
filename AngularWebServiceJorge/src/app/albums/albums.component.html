@@ -1,0 +1,9 @@
+<button (click)="funcion_Mostrar()">mostrar Albums</button>
+<div>
+  <h3>Albums: </h3>
+  <div *ngFor="let Album of albums">
+    <h1>{{Album.userId}}</h1>
+    <h2>{{Album.id}}</h2>
+    <p>{{Album.title}}</p>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<button (click)="funcion_Mostrar()">mostrar Todos</button>
+<div>
+  <h3>Todos: </h3>
+  <div *ngFor="let todo of Todos">
+    <h1>{{todo.userId}}</h1>
+    <h2>{{todo.id}}</h2>
+    <p>{{todo.title}}</p>
+    <p>{{todo.completed}}</p>
+  </div>
+</div>

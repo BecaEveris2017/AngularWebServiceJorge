@@ -1,0 +1,12 @@
+
+<button (click)="funcion_CargaComments()">mostrar comentarios</button>
+
+<div>
+  <h3>Comments: </h3>
+  <div *ngFor="let comment of comments">
+    <h1>{{comment.postId}}</h1>
+    <h2>{{comment.name}}</h2>
+    <p>{{comment.email}}</p>
+    <p>{{comment.body}}</p>
+  </div>
+</div>

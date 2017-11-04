@@ -1,0 +1,21 @@
+<button (click)="funcion_Mostrar()">mostrar users</button>
+<div>
+  <h3>Users: </h3>
+  <div *ngFor="let user of users">
+    <h3>Name: {{user.name}}</h3>
+    <h4>Username: {{user.username}}</h4>
+    <h4>email: {{user.email}}</h4>
+    <div>
+      <h3>Address:</h3>
+      <h4>{{user.address.street}}</h4>
+      <h4>{{user.address.suite}}</h4>
+      <h4>{{user.address.city}}</h4>
+      <h4>{{user.address.zipcode}}</h4>
+      <div>
+        <h3>Geo:</h3>
+        <h4>{{user.address.geo.lat}}</h4>
+        <h4>{{user.address.geo.lng}}</h4>
+      </div>
+    </div>
+  </div>
+</div>

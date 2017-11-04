@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+.tab-content{
+    overflow: auto;
+    min-height: 500px;
+    max-height: 500px;
+    
+
+}
+.tabs-class {
+    min-height: 500px;
+    max-height: 500px;
+    border:1px solid #ddd;
+}
+.padding-left-10{
+    padding-left: 10;
+}
+.padding-right-0{
+    padding-right: 0;
+}
+.foto_class{
+    height: 100px;
+    
+}
+.texto_photos{
+    left:120px;
+    padding-left: 120px;
+}

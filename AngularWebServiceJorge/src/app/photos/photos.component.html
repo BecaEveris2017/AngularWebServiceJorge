@@ -1,0 +1,11 @@
+<button (click)="funcion_cargafotos()">mostrar fotos</button>
+<div>
+  <h3>Photos: </h3>
+  <div *ngFor="let photo of photos">
+    <img class="foto_class" src="{{photo.url}}">
+    <h1 class="texto_photos">ID Album: {{photo.albumId}}</h1>
+    <h2 class="texto_photos">ID photo: {{photo.id}}</h2>
+    <h3 class="texto_photos">Title: {{photo.title}}</h3>
+    <p class="texto_photos">thumbnail: {{photo.thumbnailUrl}}</p>
+  </div>
+</div>
